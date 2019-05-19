@@ -18,7 +18,7 @@
 
 	`user` - your username in system
 
-	`core` - Wordpress project folder
+	`core` - Wordpress files folder (config)
 	
 5. Add these lines in `wp-config.php`
 	
