@@ -12,7 +12,7 @@
 
 3. Run `docker-compose up`
 
-4. Set file permissions
+4. Set file permissions:
 
 	`sudo chown -R user:www-data core`
 
@@ -21,10 +21,10 @@
 	`core` - Wordpress project folder
 
 
-5. Database uses Adminer and work on port 5050
+5. Database uses Adminer and works on port 5050
 
 	`localhost:5050`
 
-6. Site work on port 5000
+6. Site works on port 5000
 
 	`localhost:5000`
