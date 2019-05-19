@@ -21,7 +21,7 @@
 	`core` - Wordpress project folder
 
 
-5. Database use Adminer and work on port 5050
+5. Database uses Adminer and work on port 5050
 
 	`localhost:5050`
 
