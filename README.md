@@ -10,7 +10,7 @@
 
 	`DBPREF` - prefix for Wordpress DB
 
-3. Run `docker-compose up -d`
+3. `# docker-compose up -d`
 
 4. Set file permissions:
 
