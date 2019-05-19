@@ -14,7 +14,7 @@
 
 4. Set file permissions:
 
-	`sudo chown -R user:www-data core`
+	`sudo chown -R user:www-data core` - `user` - your username in system
 
 	`suco chown -R 777 core`
 
