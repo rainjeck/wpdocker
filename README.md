@@ -14,9 +14,11 @@
 
 4. Set file permissions:
 
-	`sudo chown -R user:www-data core` - `user` - your username in system
+	`sudo chown -R user:www-data core`
 
 	`suco chown -R 777 core`
+
+	`user` - your username in system
 
 	`core` - Wordpress project folder
 
