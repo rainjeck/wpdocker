@@ -16,7 +16,7 @@
 
 	`# sudo chown -R user:www-data core`
 
-	`# suco chown -R 777 core`
+	`# sudo chmod -R 777 core`
 
 	`user` - your username in system
 
