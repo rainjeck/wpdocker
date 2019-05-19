@@ -19,3 +19,11 @@
 	`core` - Wordpress project folder
 
 4. Run `docker-compose up`
+
+5. Database use Adminer and work on port 5050
+
+	`localhost:5050`
+
+6. Site work on port 5000
+
+	`localhost:5000`
