@@ -10,8 +10,9 @@
 
 	`DBPREF` - prefix for Wordpress DB
 
+3. Run `docker-compose up`
 
-3. Set file permissions
+4. Set file permissions
 
 	`sudo chown -R user:www-data core`
 
@@ -19,7 +20,6 @@
 
 	`core` - Wordpress project folder
 
-4. Run `docker-compose up`
 
 5. Database use Adminer and work on port 5050
 
