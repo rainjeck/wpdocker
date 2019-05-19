@@ -2,7 +2,7 @@
 
 *For Linux Ubuntu*
 
-1. `git clone https://github.com/rainjeck/wpdocker.git`
+1. `# git clone https://github.com/rainjeck/wpdocker.git`
 
 2. Create `.env` file in project folder
 
@@ -14,9 +14,9 @@
 
 4. Set file permissions:
 
-	`sudo chown -R user:www-data core`
+	`# sudo chown -R user:www-data core`
 
-	`suco chown -R 777 core`
+	`# suco chown -R 777 core`
 
 	`user` - your username in system
 
