@@ -14,13 +14,17 @@
 
 4. Set file permissions:
 
-	`# sudo chown -R user:www-data core`
-
-	`# sudo chmod -R 777 core`
+	`# sudo chown -R user:www-data core && sudo chmod -R 777 core`
 
 	`user` - your username in system
 
 	`core` - Wordpress project folder
+	
+5. Add these lines in `wp-config.php`
+	
+	`define('WPLANG', 'ru_RU');` - russian language
+	
+	`define('FS_METHOD', 'direct');` - for correctly work market of plugins
 
 
 5. Database uses Adminer and works on port 5050
