@@ -37,9 +37,7 @@
 	
 7. htaccess
 	
-	`
-	AddDefaultCharset UTF-8
-
+	`AddDefaultCharset UTF-8
 	# BEGIN WordPress
 	<IfModule mod_rewrite.c>
 	RewriteEngine On
@@ -48,8 +46,5 @@
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule . /index.php [L]
-
 	</IfModule>
-
-	# END WordPress
-	`
+	# END WordPress`
