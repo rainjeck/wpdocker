@@ -67,3 +67,5 @@
 	RewriteCond %{HTTPS} !=on
 	RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
 	```
+	
+9. [Robots.txt](https://gist.github.com/rainjeck/4cadf694438e69db4122d93966b4f49e)
