@@ -4,11 +4,7 @@
 
 1. `# git clone https://github.com/rainjeck/wpdocker.git`
 
-2. Create `.env` file in project folder
-
-	`DBPREF=wp`
-
-	`DBPREF` - prefix for Wordpress DB
+2. Change DB prefix
 
 3. `# docker-compose up -d`
 
