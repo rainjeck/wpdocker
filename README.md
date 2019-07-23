@@ -22,7 +22,7 @@
 	
 	`define('FS_METHOD', 'direct');` - for correctly work market of plugins
 
-5.1. Hide WP - 'wp-content' to 'files' folder
+6. Hide WP - 'wp-content' to 'files' folder. Add lines before install.
 
 	define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/files' );
 	define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/files' );
@@ -34,15 +34,15 @@
 
 	define( 'UPLOADS', 'files/uploads' );
 	
-5. Database uses Adminer and works on port 5050
+7. Database uses Adminer and works on port 5050
 
 	`localhost:5050`
 
-6. Site works on port 5000
+8. Site works on port 5000
 
 	`localhost:5000`
 	
-7. htaccess
+9. htaccess
 	
 	```
 	AddDefaultCharset UTF-8
@@ -63,7 +63,7 @@
 	# END WordPress
 	```
 	
-8. WWW & HTTP to without WWW & HTTPS
+10. WWW & HTTP to without WWW & HTTPS
 	```
 	RewriteEngine On
 	RewriteBase /
@@ -75,4 +75,4 @@
 	RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
 	```
 	
-9. [Robots.txt](https://gist.github.com/rainjeck/4cadf694438e69db4122d93966b4f49e)
+11. [Robots.txt](https://gist.github.com/rainjeck/4cadf694438e69db4122d93966b4f49e)
