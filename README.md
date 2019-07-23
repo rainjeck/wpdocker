@@ -23,7 +23,8 @@
 	`define('FS_METHOD', 'direct');` - for correctly work market of plugins
 
 6. Hide WP - 'wp-content' to 'files' folder. Add lines before install.
-
+	
+	```
 	define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/files' );
 	define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/files' );
 
@@ -33,6 +34,7 @@
 	$theme_root = WP_CONTENT_DIR . '/themes';
 
 	define( 'UPLOADS', 'files/uploads' );
+	```
 	
 7. Database uses Adminer and works on port 5050
 
