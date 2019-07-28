@@ -10,9 +10,7 @@
 
 4. Set file permissions:
 
-	`# sudo chown -R user:www-data core && sudo chmod -R 777 core`
-
-	`user` - your username in system
+	`# sudo chown -R :www-data core && sudo chmod -R 777 core`
 
 	`core` - Wordpress files folder (config)
 	
@@ -22,18 +20,16 @@
 	
 	`define('FS_METHOD', 'direct');` - for correctly work market of plugins
 
-6. Hide WP - 'wp-content' to 'files' folder. Add lines before install.
+6. Hide WP - 'wp-content' to 'data' folder. Add lines before install. Rename 'wp-content' to 'data'.
 	
 	```
-	define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/files' );
-	define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/files' );
+	define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/data' );
+	define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/data' );
 
-	define( 'WP_PLUGIN_DIR', dirname(__FILE__) . '/files/plugins' );
-	define( 'WP_PLUGIN_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/files/plugins' );
+	define( 'WP_PLUGIN_DIR', dirname(__FILE__) . '/data/plugins' );
+	define( 'WP_PLUGIN_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/data/plugins' );
 
-	$theme_root = WP_CONTENT_DIR . '/themes';
-
-	define( 'UPLOADS', 'files/uploads' );
+	define( 'UPLOADS', 'data/uploads' );
 	```
 	
 7. Database uses Adminer and works on port 5050
