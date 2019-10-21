@@ -1,3 +1,3 @@
 #!/bin/dash
-docker-compose kill
+sudo docker-compose kill
 exit
