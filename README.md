@@ -14,10 +14,9 @@
 
 	`core` - Wordpress files folder from docker-compose.yml
 
-5. Add these lines in `wp-config.php`
+5. Add in `wp-config.php`
 
 	```
-	define('WPLANG', 'ru_RU');
 	define('FS_METHOD', 'direct');
 	```
 
