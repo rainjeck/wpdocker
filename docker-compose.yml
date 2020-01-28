@@ -2,7 +2,7 @@ version: "3"
 
 services:
   db:
-    image: mysql:5.7
+    image: mysql:5
     command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -11,7 +11,7 @@ services:
       - db_data:/var/lib/mysql
 
   adminer:
-    image: adminer:4.7.4
+    image: adminer:4
     depends_on:
       - db
     ports:
@@ -20,7 +20,7 @@ services:
       ADMINER_DESIGN: flat
 
   wordpress:
-    image: wordpress:latest
+    image: wordpress:5
     ports:
       - 5000:80
     volumes:
