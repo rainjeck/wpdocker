@@ -21,7 +21,7 @@
 	define( 'DISALLOW_FILE_EDIT', true );
 	```
 
-6. Hide WP - 'wp-content' to 'data' folder. Add lines before install. Rename 'wp-content' to 'data'.
+6. Hide WP - `wp-content` to `data` folder. Add lines before install. Rename 'wp-content' to 'data'.
 
 	```
 	define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/data' );
