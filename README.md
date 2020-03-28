@@ -17,7 +17,8 @@
 5. Add in `wp-config.php`
 
 	```
-	define('FS_METHOD', 'direct');
+	define( 'FS_METHOD', 'direct' );
+	define( 'DISALLOW_FILE_EDIT', true );
 	```
 
 6. Hide WP - 'wp-content' to 'data' folder. Add lines before install. Rename 'wp-content' to 'data'.
