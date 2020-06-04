@@ -10,9 +10,9 @@
 
 4. Set file permissions:
 
-	`# sudo chown -R :www-data core && sudo chmod -R 777 core`
+	`# sudo chown -R :www-data public && sudo chmod -R 777 public`
 
-	`core` - Wordpress files folder from docker-compose.yml
+	`public` - Wordpress files folder from docker-compose.yml
 
 5. Add in `wp-config.php`
 
@@ -21,14 +21,14 @@
 	define( 'DISALLOW_FILE_EDIT', true );
 	```
 
-6. Hide WP - `wp-content` to `data` folder. Add lines before install. Rename `wp-content` to `data`.
+6. Hide WP - `wp-content` to `assets` folder. Add lines before install. Rename `wp-content` to `assets`.
 
 	```
-	define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/data' );
-	define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/data' );
-	define( 'WP_PLUGIN_DIR', dirname(__FILE__) . '/data/plugins' );
-	define( 'WP_PLUGIN_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/data/plugins' );
-	define( 'UPLOADS', 'data/uploads' );
+	define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/assets' );
+	define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/assets' );
+	define( 'WP_PLUGIN_DIR', dirname(__FILE__) . '/assets/plugins' );
+	define( 'WP_PLUGIN_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/assets/plugins' );
+	define( 'UPLOADS', 'assets/uploads' );
 	```
 
 7. Database uses Adminer and works on port 8080

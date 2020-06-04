@@ -11,7 +11,7 @@ services:
       - db_data:/var/lib/mysql
 
   adminer:
-    image: adminer:4
+    image: adminer
     depends_on:
       - db
     ports:
@@ -20,11 +20,11 @@ services:
       ADMINER_DESIGN: pepa-linha
 
   wordpress:
-    image: wordpress:5
+    image: wordpress
     ports:
       - 5000:80
     volumes:
-      - ./core:/var/www/html
+      - ./public:/var/www/html
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_NAME: wordpress
