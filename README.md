@@ -2,9 +2,9 @@
 
 *For Linux Ubuntu*
 
-1. `# git clone https://github.com/rainjeck/wpdocker.git`
+1. `# git clone https://github.com/rainjeck/wpdocker.git .`
 
-2. Change DB prefix
+2. Change DB prefix in `docker-compose.yml`
 
 3. `# docker-compose up -d`
 
@@ -23,6 +23,8 @@
 
 6. Hide WP - `wp-content` to `assets` folder. Add lines before install. Rename `wp-content` to `assets`.
 
+	`# mv public/wp-content public/assets`
+
 	```
 	define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/assets' );
 	define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/assets' );
@@ -31,13 +33,19 @@
 	define( 'UPLOADS', 'assets/uploads' );
 	```
 
-7. Database uses Adminer and works on port 8080
+8. Setup theme
 
-	`localhost:8080`
+`# git clone https://github.com/rainjeck/wordpress.git public/assets/themes/apptheme`
 
-8. Site works on port 5000
+9. Create link to theme folder
 
-	`localhost:5000`
+`# ln -r -s public/assets/themes/apptheme apptheme`
+
+10. **Start installation**
+
+11. Database uses Adminer and works on port **8080**: `localhost:8080`
+
+11. Site works on port **5000**: `localhost:5000`
 
 9. htaccess
 
