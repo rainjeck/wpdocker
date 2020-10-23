@@ -35,11 +35,11 @@
 
 8. Setup theme
 
-`# git clone https://github.com/rainjeck/wordpress.git public/assets/themes/apptheme`
+	`# git clone https://github.com/rainjeck/wordpress.git public/assets/themes/apptheme`
 
 9. Create link to theme folder
 
-`# ln -r -s public/assets/themes/apptheme apptheme`
+	`# ln -r -s public/assets/themes/apptheme apptheme`
 
 10. **Start installation**
 
