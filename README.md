@@ -33,47 +33,27 @@
 	define( 'UPLOADS', 'assets/uploads' );
 	```
 
-8. Setup theme
+7. Setup theme
 
 	`# git clone https://github.com/rainjeck/wordpress.git public/assets/themes/apptheme`
 
-9. Create link to theme folder
+8. Create link to theme folder
 
 	`# ln -r -s public/assets/themes/apptheme apptheme`
 
-10. **Start installation**
+9. **Start installation**
 
-11. Database uses Adminer and works on port **8080**: `localhost:8080`
+Database uses Adminer and works on port **8080**: `localhost:8080`
+Site works on port **5000**: `localhost:5000`
 
-11. Site works on port **5000**: `localhost:5000`
+10. [Robots.txt](https://gist.github.com/rainjeck/4cadf694438e69db4122d93966b4f49e)
 
-9. htaccess
+11. Add libs for optimize images
 
-	```
-	AddDefaultCharset UTF-8
+    `<container_id>` - wordpress container
 
-	# BEGIN WordPress
-	<IfModule mod_rewrite.c>
-	RewriteEngine On
-	RewriteBase /
-	RewriteRule ^index\.php$ - [L]
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule . /index.php [L]
-	</IfModule>
-	# END WordPress
-	```
-
-10. WWW & HTTP to without WWW & HTTPS
-	```
-	RewriteEngine On
-	RewriteBase /
-
-	RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-	RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-
-	RewriteCond %{HTTPS} !=on
-	RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
-	```
-
-11. [Robots.txt](https://gist.github.com/rainjeck/4cadf694438e69db4122d93966b4f49e)
+    ```
+    docker exec -it <container_id> bash
+    apt-get update
+    apt-get install jpegoptim pngquant optipng
+    ```
