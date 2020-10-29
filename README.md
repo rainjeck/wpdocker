@@ -58,3 +58,12 @@ Site works on port **5000**: `localhost:5000`
     apt-get update
     apt-get install jpegoptim pngquant optipng
     ```
+
+12. Image Sizes
+
+	```
+	thumbnail 100
+	medium 1024
+	medium_large 1440
+	large 2000
+	```
