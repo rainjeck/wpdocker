@@ -44,6 +44,7 @@
 9. **Start installation**
 
 Database uses Adminer and works on port **8080**: `localhost:8080`
+
 Site works on port **5000**: `localhost:5000`
 
 10. [Robots.txt](https://gist.github.com/rainjeck/4cadf694438e69db4122d93966b4f49e)
