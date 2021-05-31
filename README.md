@@ -1,27 +1,27 @@
 # WPDOCKER
 
-*For Linux Ubuntu*
+*Was made for Linux*
 
-1. `# git clone https://github.com/rainjeck/wpdocker.git .`
+`# git clone https://github.com/rainjeck/wpdocker.git .`
 
-2. Change DB prefix in `docker-compose.yml`
+1. Change DB prefix in `docker-compose.yml`
 
-3. `# docker-compose up -d`
+2. `# docker-compose up -d`
 
-4. Set file permissions:
+3. Set file permissions:
 
-	`# sudo chown -R :www-data public && sudo chmod -R 777 public`
+	`# sudo chown -R <user>:www-data public && sudo chmod -R 777 public`
 
 	`public` - Wordpress files folder from docker-compose.yml
 
-5. Add in `wp-config.php`
+4. Add in `wp-config.php`
 
 	```
 	define( 'FS_METHOD', 'direct' );
 	define( 'DISALLOW_FILE_EDIT', true );
 	```
 
-6. Hide WP - `wp-content` to `assets` folder. Add lines before install. Rename `wp-content` to `assets`.
+5. Hide WP - `wp-content` to `assets` folder. Add lines before install. Rename `wp-content` to `assets`.
 
 	`# mv public/wp-content public/assets`
 
@@ -33,37 +33,41 @@
 	define( 'UPLOADS', 'assets/uploads' );
 	```
 
-7. Setup theme
+6. **Start Wordpress installation**
 
-	`# git clone https://github.com/rainjeck/wordpress.git public/assets/themes/apptheme`
+	Site: `localhost:5000`
 
-8. Create link to theme folder
+	Adminer: `localhost:8080`
 
-	`# ln -r -s public/assets/themes/apptheme apptheme`
-
-9. **Start installation**
-
-Database uses Adminer and works on port **8080**: `localhost:8080`
-
-Site works on port **5000**: `localhost:5000`
-
-10. [Robots.txt](https://gist.github.com/rainjeck/4cadf694438e69db4122d93966b4f49e)
-
-11. Add libs for optimize images
-
-    `<container_id>` - wordpress container
+7. [Theme Template](https://github.com/rainjeck/wordpress)
 
     ```
-    docker exec -it <container_id> bash
-    apt-get update
-    apt-get install jpegoptim pngquant optipng
+    Create link to theme folder
+
+    # ln -r -s public/assets/themes/<theme> <link_name>
     ```
 
-12. Image Sizes
 
-	```
-	thumbnail 100
-	medium 1024
-	medium_large 1440
-	large 2000
-	```
+## Add libs for optimize images
+
+```
+# docker-compose ps
+
+<container_id> - wordpress container
+
+# docker exec -it <container_id> bash
+# apt-get update
+# apt-get install jpegoptim pngquant optipng
+```
+
+
+## Image Sizes
+
+```
+thumbnail 100
+medium 1024
+medium_large 1440
+large 2048
+
+thumblarge 500x500 crop (from theme template)
+```
